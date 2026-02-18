@@ -45,7 +45,7 @@
 	niri.nixosModules.niri
 	stylix.nixosModules.stylix
 	silentSDDM.nixosModules.default
-	disko.nixosModules.disko
+	#disko.nixosModules.disko
         ./hosts/clementine/configuration.nix
         ./hosts/clementine/disko.nix
 	./modules/shared.nix
