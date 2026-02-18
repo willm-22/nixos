@@ -47,7 +47,7 @@
 	silentSDDM.nixosModules.default
 	#disko.nixosModules.disko
         ./hosts/clementine/configuration.nix
-        ./hosts/clementine/disko.nix
+        #./hosts/clementine/disko.nix
 	./modules/shared.nix
 	{
 	  nixpkgs.overlays = [ niri.overlays.niri ];
