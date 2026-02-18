@@ -16,6 +16,7 @@
     ../../modules/home/music/mpd.nix
     ../../modules/home/music/rmpc.nix
     ../../modules/home/packages.nix
+    ../../modules/home/services/syncthing.nix
   ];
 
   home.username = "will";
