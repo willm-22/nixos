@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  xdg.portal = {
+  xdg.portal = lib.mkForce {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     config = {
