@@ -18,6 +18,10 @@
     ../../modules/home/packages.nix
     ../../modules/home/services/syncthing.nix
     ../../modules/home/obsidian.nix
+    ../../modules/home/gui_pkgs.nix
+    ../../modules/home/yazi.nix
+    ../../modules/home/anki.nix
+    ../../modules/home/shared_pkgs.nix
   ];
 
   home.username = "will";

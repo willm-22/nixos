@@ -12,6 +12,7 @@
       ../../modules/nixos/os/firewall.nix
       ../../modules/nixos/os/sddm.nix
       ../../modules/nixos/os/xdg-portal.nix
+      ../../modules/nixos/os/bluetooth.nix
     ];
 
   networking = {
