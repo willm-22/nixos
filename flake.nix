@@ -29,10 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, disko, ... }@inputs:
@@ -45,9 +41,7 @@
 	niri.nixosModules.niri
 	stylix.nixosModules.stylix
 	silentSDDM.nixosModules.default
-	#disko.nixosModules.disko
         ./hosts/clementine/configuration.nix
-        #./hosts/clementine/disko.nix
 	./modules/shared.nix
 	{
 	  nixpkgs.overlays = [ niri.overlays.niri ];
