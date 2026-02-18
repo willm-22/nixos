@@ -1,0 +1,26 @@
+sw_volume: 100
+audio_device_state:1:PulseAudio
+state: stop
+current: 8
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0
+mixrampdelay: -1
+lastloadedplaylist: 
+playlist_begin
+0:Elliott Smith/Either_Or/01 Speed Trials.flac
+1:Elliott Smith/Either_Or/02 Alameda.flac
+2:Elliott Smith/Either_Or/03 Ballad of Big Nothing.flac
+3:Elliott Smith/Either_Or/04 Between the Bars.flac
+4:Elliott Smith/Either_Or/05 Pictures of Me.flac
+5:Elliott Smith/Either_Or/06 No Name No. 5.flac
+6:Elliott Smith/Either_Or/07 Rose Parade.flac
+7:Elliott Smith/Either_Or/08 Punch and Judy.flac
+8:Elliott Smith/Either_Or/09 Angeles.flac
+9:Elliott Smith/Either_Or/10 Cupid’s Trick.flac
+10:Elliott Smith/Either_Or/11 2_45 AM.flac
+11:Elliott Smith/Either_Or/12 Say Yes.flac
+playlist_end
