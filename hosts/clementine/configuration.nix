@@ -11,6 +11,7 @@
       ../../modules/nixos/nfs/music.nix
       ../../modules/nixos/os/firewall.nix
       ../../modules/nixos/os/sddm.nix
+      ../../modules/nixos/os/xdg-portal.nix
     ];
 
   networking = {

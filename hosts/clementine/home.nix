@@ -17,6 +17,7 @@
     ../../modules/home/music/rmpc.nix
     ../../modules/home/packages.nix
     ../../modules/home/services/syncthing.nix
+    ../../modules/home/obsidian.nix
   ];
 
   home.username = "will";
