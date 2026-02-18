@@ -30,11 +30,12 @@
     };
 
     disko = {
-      
+      url = "github:nix-community/disk";
+      nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, ... }@inputs:
+  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, disko, ... }@inputs:
   {
     nixosConfigurations."clementine" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -44,7 +45,9 @@
 	niri.nixosModules.niri
 	stylix.nixosModules.stylix
 	silentSDDM.nixosModules.default
+	disko.nixosModules.disko
         ./hosts/clementine/configuration.nix
+        ./hosts/clementine/disko.nix
 	./modules/shared.nix
 	{
 	  nixpkgs.overlays = [ niri.overlays.niri ];
