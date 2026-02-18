@@ -28,6 +28,10 @@
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      
+    };
   };
 
   outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, ... }@inputs:

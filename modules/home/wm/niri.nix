@@ -3,7 +3,7 @@
   programs.niri = {
     settings = {
       input = {
-        keyboard.xkb.options = "caps:swapescape";
+        #keyboard.xkb.options = "caps:swapescape";
 
 	touchpad = {
 	  dwt = true;
