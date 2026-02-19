@@ -5,7 +5,7 @@
     endpoints = {
       "last.fm" = {
         username = "Willm_";
-	passwordFile = 
+	passwordFile = config.sops.secrets."lastfm-password".path;
       };
     };
   };

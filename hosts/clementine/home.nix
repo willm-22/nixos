@@ -14,6 +14,7 @@
     ../../modules/home/swww.nix
     ../../modules/home/browser/zen.nix
     ../../modules/home/music/mpd.nix
+    ../../modules/home/music/mpdscribble.nix
     ../../modules/home/music/rmpc.nix
     ../../modules/home/packages.nix
     ../../modules/home/services/syncthing.nix

@@ -4,10 +4,10 @@
     defaultSopsFile = ../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
 
-    age.keyFile = "/home/will/.config/sops/age/keys.txt";
+    age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 
-    secrets = {
-      lastfm-password = {};
+    secrets.lastfm-password = {
+      owner = "mpdscribble";
     };
   };
 
