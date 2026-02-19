@@ -4,8 +4,8 @@
     enable = true;
     endpoints = {
       "last.fm" = {
-        username = "willm_";
-	passwordFile =
+        username = "Willm_";
+	passwordFile = 
       };
     };
   };

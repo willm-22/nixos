@@ -8,7 +8,9 @@
       ./nixos/os/keyboard.nix
       ./nixos/os/printing.nix
       ./nixos/os/audio.nix
+      ./nixos/os/ssh.nix
       ./nixos/services/tailscale.nix
+      ./nixos/packages/sops.nix
     ];
   users.users.will = {
     isNormalUser = true;

@@ -8,6 +8,7 @@
     git
     wget
     btop
+    sops
   ];
 
   programs.fish.enable = true;
