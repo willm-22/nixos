@@ -29,9 +29,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    sops-nix = {
+      url = "github:Mix92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
-  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, disko, ... }@inputs:
+  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, ... }@inputs:
   {
     nixosConfigurations."clementine" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -41,6 +46,7 @@
 	niri.nixosModules.niri
 	stylix.nixosModules.stylix
 	silentSDDM.nixosModules.default
+	sops-nix.nixosModules.sops
         ./hosts/clementine/configuration.nix
 	./modules/shared.nix
 	{
