@@ -1,5 +1,5 @@
 keys:
-  - &clementine age1htwp7dft24rhkchmlxvmaxkpsth4s8daz2p86ux6m90fly8wkvtqzah066
+  - &clementine age18u6w0slrgtarcf5gvc30te66ctun79ltlupcj955vayh062wrs9qjqhdas
 creation_rules:
   - path_regex: secrets/secrets.yaml
     key_groups:
