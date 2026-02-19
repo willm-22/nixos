@@ -67,5 +67,36 @@
 	}
       ];
     };
+
+    nixosConfigurations."angeles" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [
+        home-manager.nixosModules.home-manager
+	niri.nixosModules.niri
+	stylix.nixosModules.stylix
+	silentSDDM.nixosModules.default
+	sops-nix.nixosModules.sops
+        ./hosts/angeles/configuration.nix
+	./modules/shared.nix
+	{
+	  nixpkgs.overlays = [ niri.overlays.niri ];
+	}
+	{
+	  home-manager = {
+	    useGlobalPkgs = true;
+	    useUserPackages = true;
+	    extraSpecialArgs = { inherit inputs; };
+	    users.will = {
+	      imports = [
+	        ./hosts/angeles/home.nix
+		inputs.zen-browser.homeModules.twilight
+	      ];
+	    };
+	  };
+	}
+      ];
+    };
+
   };
 }
