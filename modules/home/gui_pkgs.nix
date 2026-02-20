@@ -9,5 +9,11 @@
     feishin
     obs-studio
     better-control
+    bitwarden-desktop
+    bitwarden-cli
+    wl-clipboard
+    jq
+    gnupg
+    fzf
   ];
 }

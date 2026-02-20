@@ -103,6 +103,7 @@
         "Mod+Shift+E".action.quit = [ ];
         "Mod+T".action.spawn = "kitty";
 	"Mod+D".action.spawn-sh = "rofi -show drun";
+	"Mod+E".action.spawn = "rofi-dash";
 
 	"Mod+H".action.focus-column-left = [ ];
 	"Mod+J".action.focus-window-down = [ ];

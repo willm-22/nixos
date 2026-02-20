@@ -7,6 +7,8 @@
     ../../modules/home/wm/fuzzel.nix
     ../../modules/home/wm/outputs-angeles.nix
     ../../modules/home/rofi/rofi.nix
+    ../../modules/home/rofi/scripts/rofi-mpd.nix
+    ../../modules/home/rofi/scripts/rofi-dash.nix
 
     ../../modules/home/stylix/stylix.nix
 
@@ -27,7 +29,8 @@
     ../../modules/home/shared_pkgs.nix
     ../../modules/home/git.nix
 
-    #../../modules/home/environment-variables.nix
+    ../../modules/home/neovim/neovim.nix
+    ../../modules/home/environment-variables.nix
   ];
 
   home.username = "will";

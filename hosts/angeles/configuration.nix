@@ -14,6 +14,7 @@
       ../../modules/nixos/os/sddm.nix
       ../../modules/nixos/os/xdg-portal.nix
       ../../modules/nixos/os/bluetooth.nix
+      ../../modules/nixos/os/environment-variables.nix
     ];
 
   networking = {
