@@ -7,6 +7,7 @@
       ../../modules/nixos/packages/niri.nix
       ../../modules/nixos/packages/swaylock.nix
       ../../modules/nixos/stylix/stylix.nix
+      ../../modules/nixos/stylix/fonts.nix
       ../../modules/nixos/packages/thunar.nix
       ../../modules/nixos/nfs/music.nix
       ../../modules/nixos/os/firewall.nix

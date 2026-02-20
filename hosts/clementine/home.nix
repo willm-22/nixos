@@ -23,6 +23,7 @@
     ../../modules/home/yazi.nix
     ../../modules/home/anki.nix
     ../../modules/home/shared_pkgs.nix
+    ../../modules/home/environment-variables.nix
   ];
 
   home.username = "will";

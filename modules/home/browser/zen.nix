@@ -2,7 +2,7 @@
 {
   programs.zen-browser = {
     enable = true;
-
+    suppressXdgMigrationWarning = true;
     profiles = {
       will = {
       };

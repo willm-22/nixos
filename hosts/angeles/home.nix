@@ -6,6 +6,7 @@
     ../../modules/home/wm/niri-startup.nix
     ../../modules/home/wm/fuzzel.nix
     ../../modules/home/wm/outputs-angeles.nix
+    ../../modules/home/rofi/rofi.nix
 
     ../../modules/home/stylix/stylix.nix
 
@@ -24,6 +25,8 @@
     ../../modules/home/yazi.nix
     ../../modules/home/anki.nix
     ../../modules/home/shared_pkgs.nix
+
+    #../../modules/home/environment-variables.nix
   ];
 
   home.username = "will";

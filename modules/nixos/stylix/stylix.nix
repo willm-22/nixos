@@ -12,4 +12,13 @@
     light = "Papirus-Light";
     dark = "Papirus-Dark";
   };
+
+  stylix.cursor = {
+    #package = pkgs.catppuccin-cursors.mochaDark;
+    #name = "catppuccin-mocha-dark-cursors";
+    package = pkgs.everforest-cursors;
+    name = "everforest-cursors";
+
+    size = 24;
+  };
 }
