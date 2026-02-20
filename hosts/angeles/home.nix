@@ -5,6 +5,7 @@
     ../../modules/home/wm/niri.nix
     ../../modules/home/wm/niri-startup.nix
     ../../modules/home/wm/fuzzel.nix
+    ../../modules/home/wm/outputs-angeles.nix
 
     ../../modules/home/stylix/stylix.nix
 
