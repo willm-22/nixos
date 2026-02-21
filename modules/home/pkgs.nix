@@ -18,5 +18,8 @@
     gnupg
     fzf
     heroic
+    python3
+    unzip
+    pavucontrol
   ];
 }
