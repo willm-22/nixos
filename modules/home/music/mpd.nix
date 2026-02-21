@@ -1,5 +1,9 @@
 { config, pkgs, lib, ... }:
 {
+  imports = [
+    ./mpdscribble.nix
+    ./rmpc.nix
+  ];
   services.mpd = {
     enable = true;
     dbFile = "/home/will/nixos/modules/home/music/mpd/mpd.db";

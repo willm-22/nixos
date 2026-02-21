@@ -2,6 +2,8 @@
 {
   programs.calibre.enable = true;
   programs.onlyoffice.enable = true;
+  programs.gh.enable = true;
+  programs.btop.enable = true;
 
   home.packages = with pkgs; [
     nicotine-plus
@@ -15,5 +17,6 @@
     jq
     gnupg
     fzf
+    heroic
   ];
 }
