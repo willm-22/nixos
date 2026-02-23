@@ -5,6 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/nixos/shared-desktop.nix
+      ../../modules/nixos/os/battery.nix
     ];
 
   networking = {

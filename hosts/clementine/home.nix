@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/home/shared-desktop.nix
+    ../../modules/home/clementine.nix
   ];
 
   home.username = "will";
