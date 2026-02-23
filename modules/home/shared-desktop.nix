@@ -13,5 +13,6 @@
     ./services/syncthing.nix
     ./neovim/neovim.nix
     ./study/study.nix
+    ./vesktop.nix
   ];
 }

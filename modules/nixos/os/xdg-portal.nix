@@ -2,12 +2,12 @@
 {
   xdg.portal = lib.mkForce {
     enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
     config = {
       common.default = "*";
       niri = {
-        default = [ "gtk" ];
-	"org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+        default = [ "wlr" ];
+	"org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
       };
     };
   };
