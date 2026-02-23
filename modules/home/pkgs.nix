@@ -21,5 +21,6 @@
     python3
     unzip
     pavucontrol
+    python3Packages.dbus-python
   ];
 }
