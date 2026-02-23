@@ -10,6 +10,7 @@
 
     interactiveShellInit = ''
       set fish_greeting
+      fish_config prompt choose scales
     '';
   };
 }
