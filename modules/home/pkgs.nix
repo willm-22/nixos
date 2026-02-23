@@ -22,5 +22,6 @@
     unzip
     pavucontrol
     python3Packages.dbus-python
+    brightnessctl
   ];
 }
