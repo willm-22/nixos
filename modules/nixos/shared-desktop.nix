@@ -10,5 +10,11 @@
       ./os/xdg-portal.nix
       ./os/bluetooth.nix
       ./os/environment-variables.nix
+      ./os/sddm.nix
+      ./os/audio.nix
+      ./os/keyboard.nix
+      ./os/printing.nix
+      ./os/ssh.nix
+      ./os/locale.nix
   ];
 }

@@ -5,6 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/nixos/nfs/music.nix
+      ../../modules/nixos/packages/games.nix
       ../../modules/nixos/shared-desktop.nix
     ];
 

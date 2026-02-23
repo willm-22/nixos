@@ -4,6 +4,7 @@
   programs.onlyoffice.enable = true;
   programs.gh.enable = true;
   programs.btop.enable = true;
+  programs.fastfetch.enable = true;
 
   home.packages = with pkgs; [
     nicotine-plus
@@ -17,7 +18,6 @@
     jq
     gnupg
     fzf
-    heroic
     python3
     unzip
     pavucontrol
