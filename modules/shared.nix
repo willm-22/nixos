@@ -9,6 +9,7 @@
       ./nixos/os/printing.nix
       ./nixos/os/audio.nix
       ./nixos/os/ssh.nix
+      ./nixos/os/keyring.nix
       ./nixos/services/tailscale.nix
       ./nixos/packages/sops.nix
     ];

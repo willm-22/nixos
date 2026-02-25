@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  programs.calibre.enable = true;
+#  programs.calibre.enable = true;
   programs.onlyoffice.enable = true;
   programs.gh.enable = true;
   programs.btop.enable = true;

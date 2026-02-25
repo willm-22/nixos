@@ -34,9 +34,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixpkgs-calibre.url = "github:nixos/nixpkgs/nixos-24.11";
+
   };
 
-  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, nixpkgs-calibre, ... }@inputs:
   {
     nixosConfigurations."clementine" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -50,7 +52,8 @@
         ./hosts/clementine/configuration.nix
 	./modules/shared.nix
 	{
-	  nixpkgs.overlays = [ niri.overlays.niri ];
+	  nixpkgs.overlays = [ niri.overlays.niri
+	  ];
 	}
 	{
 	  home-manager = {
@@ -80,7 +83,8 @@
         ./hosts/angeles/configuration.nix
 	./modules/shared.nix
 	{
-	  nixpkgs.overlays = [ niri.overlays.niri ];
+	  nixpkgs.overlays = [ niri.overlays.niri
+	  ];
 	}
 	{
 	  home-manager = {

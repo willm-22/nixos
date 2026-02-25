@@ -1,4 +1,4 @@
 { pkgs, config, lib, ... }:
 {
-  programs.anki.enable = true;
+  #programs.anki.enable = true;
 }
