@@ -34,8 +34,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-calibre.url = "github:nixos/nixpkgs/nixos-24.11";
-
   };
 
   outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, nixpkgs-calibre, ... }@inputs:
