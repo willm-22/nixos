@@ -36,7 +36,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, nixpkgs-calibre, ... }@inputs:
+  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, ... }@inputs:
   {
     nixosConfigurations."clementine" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
