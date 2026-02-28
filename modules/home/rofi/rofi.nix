@@ -3,6 +3,7 @@
   imports = [
     ./scripts/rofi-mpd.nix
     ./scripts/rofi-dash.nix
+    ./scripts/rofi-zathura.nix
   ];
   programs.rofi = lib.mkForce {
     enable = true;

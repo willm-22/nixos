@@ -6,6 +6,7 @@
   programs.gh.enable = true;
   programs.btop.enable = true;
   programs.fastfetch.enable = true;
+  programs.zathura.enable = true;
 
   home.packages = with pkgs; [
     nicotine-plus
@@ -24,5 +25,7 @@
     pavucontrol
     python3Packages.dbus-python
     brightnessctl
+    kdePackages.okular
+    fd
   ];
 }

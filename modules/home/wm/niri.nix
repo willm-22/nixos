@@ -104,6 +104,7 @@
         "Mod+T".action.spawn = "kitty";
 	"Mod+D".action.spawn-sh = "rofi -show drun";
 	"Mod+E".action.spawn = "rofi-dash";
+	"Mod+P".action.spawn = "rofi-zathura";
 
 	"Mod+H".action.focus-column-left = [ ];
 	"Mod+J".action.focus-window-down = [ ];
