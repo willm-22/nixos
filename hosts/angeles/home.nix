@@ -2,10 +2,12 @@
 
 {
   imports = [
-    ../../modules/home/shared-desktop.nix
-    ../../modules/home/wm/outputs-angeles.nix
-    ../../modules/home/music/mpd.nix
-    ../../modules/home/games.nix
+    ./outputs.nix
+    
+    ../../modules/home/common.nix
+    ../../modules/home/desktop.nix
+
+    ../../modules/home/desktop/music/mpd.nix
   ];
 
   home.username = "will";

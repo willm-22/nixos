@@ -55,7 +55,8 @@
         silentSDDM.nixosModules.default
         sops-nix.nixosModules.sops
         ./hosts/${hostname}/configuration.nix
-        ./modules/shared.nix
+        ./modules/nixos/common.nix
+        ./modules/nixos/desktop.nix
         { nixpkgs.overlays = [ niri.overlays.niri ]; }
         { 
           home-manager = {
@@ -84,7 +85,8 @@
           sops-nix.nixosModules.sops
           disko.nixosModules.disko
           ./hosts/alameda/configuration.nix
-          ./modules/shared.nix
+          ./modules/nixos/common.nix
+          ./modules/nixos/server.nix
           {
             home-manager = {
               useGlobalPkgs = true;

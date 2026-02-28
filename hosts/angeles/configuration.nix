@@ -4,9 +4,10 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../../modules/nixos/nfs/music.nix
-      ../../modules/nixos/packages/games.nix
-      ../../modules/nixos/shared-desktop.nix
+      ../../modules/nixos/common.nix
+      ../../modules/nixos/desktop.nix
+
+      ../../modules/nixos/desktop/nfs/music.nix
     ];
 
   networking = {

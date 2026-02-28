@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ../../modules/home/shared-desktop.nix
-    ../../modules/home/clementine.nix
+    ../../modules/home/common.nix
+    ../../modules/home/desktop.nix
   ];
 
   home.username = "will";

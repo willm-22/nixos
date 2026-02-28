@@ -4,8 +4,10 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      ../../modules/nixos/shared-desktop.nix
-      ../../modules/nixos/os/battery.nix
+      ../../modules/nixos/common.nix
+      ../../modules/nixos/desktop.nix
+
+      ../../modules/nixos/desktop/os/battery.nix
     ];
 
   networking = {

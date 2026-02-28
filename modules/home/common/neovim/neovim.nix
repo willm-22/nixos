@@ -1,6 +1,9 @@
 { pkgs, config, lib, ... }:
 {
-  stylix.targets.neovim.enable = true;
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 
   programs.neovim = {
     enable = true;

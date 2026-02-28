@@ -6,10 +6,10 @@
   ];
   services.mpd = {
     enable = true;
-    dbFile = "/home/will/nixos/modules/home/music/mpd/mpd.db";
-    dataDir = /home/will/nixos/modules/home/music/mpd/data;
+    dbFile = "/home/will/nixos/modules/home/desktop/music/mpd/mpd.db";
+    dataDir = /home/will/nixos/modules/home/desktop/music/mpd/data;
     musicDirectory = /mnt/hdd1/music;
-    playlistDirectory = /home/will/nixos/modules/home/music/mpd/playlists;
+    playlistDirectory = /home/will/nixos/modules/home/desktop/music/mpd/playlists;
     network = {
       port = 6600;
       listenAddress = "any";
