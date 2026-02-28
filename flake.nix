@@ -9,7 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    niri.url = "github:sodiboo/niri-flake";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix = {
       url = "github:nix-community/stylix";
@@ -20,7 +23,7 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-	home-manager.follows = "home-manager";
+        home-manager.follows = "home-manager";
       };
     };
 
@@ -34,71 +37,66 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, disko, ... }@inputs:
+  let
+    desktopSystem = hostname: nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [
+        home-manager.nixosModules.home-manager
+        niri.nixosModules.niri
+        stylix.nixosModules.stylix
+        silentSDDM.nixosModules.default
+        sops-nix.nixosModules.sops
+        ./hosts/${hostname}/configuration.nix
+        ./modules/shared.nix
+        { nixpkgs.overlays = [ niri.overlays.niri ]; }
+        { 
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = { inherit inputs; };
+            users.will.imports = [
+              ./hosts/${hostname}/home.nix
+              inputs.zen-browser.homeModules.twilight
+            ];
+          };
+        }
+      ];
+    };
+  in
   {
-    nixosConfigurations."clementine" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        home-manager.nixosModules.home-manager
-	niri.nixosModules.niri
-	stylix.nixosModules.stylix
-	silentSDDM.nixosModules.default
-	sops-nix.nixosModules.sops
-        ./hosts/clementine/configuration.nix
-	./modules/shared.nix
-	{
-	  nixpkgs.overlays = [ niri.overlays.niri
-	  ];
-	}
-	{
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    extraSpecialArgs = { inherit inputs; };
-	    users.will = {
-	      imports = [
-	        ./hosts/clementine/home.nix
-		inputs.zen-browser.homeModules.twilight
-	      ];
-	    };
-	  };
-	}
-      ];
-    };
+    nixosConfigurations = {
+      "clementine" = desktopSystem "clementine";
+      "angeles" = desktopSystem "angeles";
 
-    nixosConfigurations."angeles" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        home-manager.nixosModules.home-manager
-	niri.nixosModules.niri
-	stylix.nixosModules.stylix
-	silentSDDM.nixosModules.default
-	sops-nix.nixosModules.sops
-        ./hosts/angeles/configuration.nix
-	./modules/shared.nix
-	{
-	  nixpkgs.overlays = [ niri.overlays.niri
-	  ];
-	}
-	{
-	  home-manager = {
-	    useGlobalPkgs = true;
-	    useUserPackages = true;
-	    extraSpecialArgs = { inherit inputs; };
-	    users.will = {
-	      imports = [
-	        ./hosts/angeles/home.nix
-		inputs.zen-browser.homeModules.twilight
-	      ];
-	    };
-	  };
-	}
-      ];
+      "alameda" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          home-manager.nixosModules.home-manager
+          sops-nix.nixosModules.sops
+          disko.nixosModules.disko
+          ./hosts/alameda/configuration.nix
+          ./modules/shared.nix
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.will.imports = [
+                ./hosts/alameda/home.nix
+              ];
+            };
+          }
+        ];
+      };
     };
-
   };
 }
