@@ -18,5 +18,6 @@
     pavucontrol
     brightnessctl
     kdePackages.okular
+    qmk
   ];
 }

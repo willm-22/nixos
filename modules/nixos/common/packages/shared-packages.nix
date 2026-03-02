@@ -9,6 +9,7 @@
     wget
     btop
     sops
+    dos2unix
   ];
 
   programs.fish.enable = true;
