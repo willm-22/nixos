@@ -2,3 +2,4 @@
 {
   programs.thunar.enable = true;
 }
+

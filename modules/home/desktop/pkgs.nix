@@ -4,6 +4,7 @@
     foliate.enable = true;
     onlyoffice.enable = true;
     zathura.enable = true;
+    codex.enable = true;
   };
 
   home.packages = with pkgs; [
