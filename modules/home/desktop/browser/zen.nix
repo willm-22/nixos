@@ -12,11 +12,11 @@
 	      };
 	      "two" = {
 		id = "f31b8ea9-ecff-48f4-9b32-ff8f5ab9a4ab";
-		position = 1001;
+		position = 1002;
 	      };
 	      "three" = {
 		id = "fb0b3e09-d4db-4cc6-b5ef-4fec45a9546c";
-		position = 1002;
+		position = 1001;
 	      };
 	    };
 
