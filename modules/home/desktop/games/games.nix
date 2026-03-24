@@ -9,5 +9,6 @@
     gamemode
     lutris
     olympus
+    gamescope
   ];
 }
