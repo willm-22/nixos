@@ -18,5 +18,7 @@
     ./desktop/games/games.nix
     
     ./desktop/terminal/kitty.nix
+
+    ./desktop/music/mpv.nix
   ];
 }
