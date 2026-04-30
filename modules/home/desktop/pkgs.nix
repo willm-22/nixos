@@ -4,7 +4,7 @@
     foliate.enable = true;
     onlyoffice.enable = true;
     zathura.enable = true;
-    codex.enable = true;
+    #codex.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -13,12 +13,16 @@
     feishin
     obs-studio
     better-control
-    bitwarden-desktop
-    bitwarden-cli
+    #bitwarden-desktop
+    #bitwarden-cli
     wl-clipboard
     pavucontrol
     brightnessctl
-    kdePackages.okular
+    #kdePackages.okular
     qmk
   ];
+
+  gtk.gtk4.theme = config.gtk.theme;
+  programs.neovim.withRuby = true;
+  programs.neovim.withPython3 = true;
 }

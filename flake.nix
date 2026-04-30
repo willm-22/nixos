@@ -37,10 +37,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, disko, ... }@inputs:

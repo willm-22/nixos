@@ -7,7 +7,7 @@
     protonup-qt
     mangohud
     gamemode
-    lutris
+    #lutris
     olympus
     gamescope
   ];
