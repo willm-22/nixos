@@ -41,6 +41,12 @@
 
   outputs = { nixpkgs, home-manager, niri, stylix, zen-browser, silentSDDM, sops-nix, disko, ... }@inputs:
   let
+    denoFixOverlay = final: prev: {
+      deno = prev.deno.overrideAttrs (_: {
+        doCheck = false;
+      });
+    };
+
     desktopSystem = hostname: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -53,7 +59,7 @@
         ./hosts/${hostname}/configuration.nix
         ./modules/nixos/common.nix
         ./modules/nixos/desktop.nix
-        { nixpkgs.overlays = [ niri.overlays.niri ]; }
+        { nixpkgs.overlays = [ niri.overlays.niri denoFixOverlay ]; }
         { 
           home-manager = {
             useGlobalPkgs = true;
